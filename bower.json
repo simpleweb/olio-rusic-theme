@@ -1,0 +1,17 @@
+{
+  "name": "rusic-landing-theme",
+  "version": "0.0.0",
+  "homepage": "https://github.com/simpleweb/rusic-landing-theme",
+  "authors": [
+    "Benjamin Reid <ben@simpleweb.co.uk>"
+  ],
+  "description": "A landing page theme for Rusic",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
