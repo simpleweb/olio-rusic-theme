@@ -1,0 +1,9 @@
+.inline-list {
+  padding: 0;
+  font-size: 0;
+
+  &__item {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
