@@ -1,0 +1,8 @@
+.wrapper {
+  max-width: $site-max-width;
+  width: $site-width;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
