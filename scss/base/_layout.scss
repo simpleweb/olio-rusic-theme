@@ -4,6 +4,13 @@
   margin: 0 auto;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
   text-align: center;
+  opacity: 0;
+  transform: translateY(-50%) scale(1.04);
+  transition: opacity ease-out .8s, transform ease-out .8s;
+
+  &.ready {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
 }
