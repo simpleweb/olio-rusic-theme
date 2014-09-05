@@ -7,6 +7,7 @@ webserver = require 'gulp-webserver'
 bower = require 'main-bower-files'
 concat = require 'gulp-concat'
 svg2png = require 'gulp-svg2png'
+prefix = require 'gulp-autoprefixer'
 
 paths =
   sass: 'scss/style.scss'
@@ -27,6 +28,7 @@ gulp.task 'sass', ->
     .src paths.sass
     .pipe sass('sourcemap=none': true).on('error', error)
     .pipe minify_css()
+    .pipe prefix()
     .pipe gulp.dest(paths.assets)
 
 gulp.task 'coffee', ->
