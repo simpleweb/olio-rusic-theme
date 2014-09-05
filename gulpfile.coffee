@@ -57,6 +57,6 @@ gulp.task 'watch', ->
   gulp.watch paths.scripts, ['scripts']
   gulp.watch paths.styles, ['sass']
 
-gulp.task 'build', ['sass', 'scripts']
+gulp.task 'build', ['sass', 'scripts', 'svg2png']
 
 gulp.task 'default', ['serve', 'sass', 'scripts', 'watch']
