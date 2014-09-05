@@ -6,4 +6,14 @@
     margin-bottom: 10px;
     display: block;
   }
+
+  &__letterbox {
+    transform-origin: top center;
+    transition: transform ease-out .4s, opacity ease-out .6s;
+
+    &.closed {
+      transform: perspective(600px) rotateX(-20deg);
+      opacity: 0;
+    }
+  }
 }
