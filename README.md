@@ -22,6 +22,10 @@ The landing page theme has the following custom attribtues available:
 - `thank_you_message`
 	- Default value: `Thank you for signing up!`
 	- Help text: `A message to display after they sign up`
+- `background_color`
+	- Help text: `Specfiy a hex colour for your background e.g. #757F9A`
+- `background_image`
+	- Help text: `Specify a background image, e.g. url(foo.jpg) or linear-gradient(90deg, #FFF 0%, #000 100%)` 
 
 You can output these calling them from the `space` object.
 
