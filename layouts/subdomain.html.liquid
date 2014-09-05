@@ -11,7 +11,49 @@
     {{ space.google_analytics }}
   </head>
   <body>
-    {{ yield }}
+
+    <div class="wrapper" id="js-wrapper">
+      <img src="{{ 'logo.svg' | asset_url }}" width="150" height="150" alt="Logo">
+
+      <h2>Our website is coming soon</h2>
+      <h3>praesent ornare elit leo, non bibendum metus</h3>
+
+      {% if current_user %}
+
+      <form action="{{ space.permalink }}/ideas" method="post" class="form">
+        <label class="form__label" for="email">
+          Please enter your email address
+        </label>
+        <input
+          class="input"
+          id="email"
+          type="email"
+          placeholder="hello@simpleweb.co.uk"
+          name="idea[title]"
+          required
+          autofocus>
+      </form>
+
+      {% else %}
+
+      <h4>Keep up to date with Twitter <em>or</em> Facebook</h4>
+      <ul class="inline-list">
+        <li class="inline-list__item">
+          <a href="/auth/twitter">
+            <img src="{{ 'twitter.svg' | asset_url }}" width="32" height="32" alt="Twitter">
+          </a>
+        </li>
+        <li class="inline-list__item">
+          <a href="/auth/facebook">
+            <img src="{{ 'facebook.svg' | asset_url }}" width="32" height="32" alt="Facebook">
+          </a>
+        </li>
+      </ul>
+
+      {% endif %}
+
+    </div>
+
     <script src="{{ 'main.js' | javascript_url }}"></script>
   </body>
 </html>
