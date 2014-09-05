@@ -3,14 +3,23 @@
   width: $site-width;
   margin: 0 auto;
   position: relative;
-  top: 50%;
   text-align: center;
-  opacity: 0;
-  transform: translateY(-50%) scale(1.04);
-  transition: opacity ease-out .8s, transform ease-out .8s;
+  padding-top: 12%;
 
-  &.ready {
-    opacity: 1;
+  .csstransforms & {
+    top: 50%;
+    padding-top: 0;
     transform: translateY(-50%) scale(1);
+  }
+
+  .csstransforms.csstransitions.opacity & {
+    opacity: 0;
+    transform: translateY(-50%) scale(1.04);
+    transition: opacity ease-out .8s, transform ease-out .8s;
+
+    &.ready {
+      opacity: 1;
+      transform: translateY(-50%) scale(1);
+    }
   }
 }
