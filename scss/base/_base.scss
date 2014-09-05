@@ -1,7 +1,7 @@
 body {
   background-image: linear-gradient(90deg, $color-dark 0%, $color-light 100%);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: 50% 50%;
   background-color: $color-dark;
   color: #F8F8F8;
