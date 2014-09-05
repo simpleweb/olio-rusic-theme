@@ -2,8 +2,8 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="90px" height="90px" viewBox="0 0 90 90" enable-background="new 0 0 90 90" xml:space="preserve">
-<path id="Facebook__x28_alt_x29_" fill="#FFFFFF" d="M90,15.001C90,7.119,82.884,0,75,0H15C7.116,0,0,7.119,0,15.001v59.998
-	C0,82.881,7.116,90,15.001,90H45V56H34V41h11v-5.844C45,25.077,52.568,16,61.875,16H74v15H61.875C60.548,31,59,32.611,59,35.024V41
-	h15v15H59v34h16c7.884,0,15-7.119,15-15.001V15.001z"/>
+	 width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<path id="Facebook__x28_alt_x29_" fill="#FFFFFF" d="M64,10.667C64,5.062,58.939,0,53.334,0H10.667C5.061,0,0,5.062,0,10.667v42.666
+	C0,58.938,5.061,64,10.667,64H32V39.822h-7.822V29.156H32V25c0-7.167,5.382-13.622,12-13.622h8.622v10.667H44
+	c-0.943,0-2.044,1.146-2.044,2.861v4.25h10.667v10.667H41.956V64h11.378C58.939,64,64,58.938,64,53.333V10.667z"/>
 </svg>

@@ -1,3 +1,4 @@
+
 add_class = (el, class_name) ->
   if (el.classList)
     el.classList.add(class_name)
@@ -11,24 +12,37 @@ add_event = (el, event_name, handler) ->
     el.attachEvent "on#{event_name}", ->
       handler.call(el)
 
-add_event document, 'DOMContentLoaded', ->
-  wrapper = document.getElementById('js-wrapper')
-  form = document.getElementById('js-form')
-  letterbox = document.getElementById('js-letterbox')
+has_class = (el, class_name) ->
+  if (el.classList)
+    el.classList.contains(class_name);
+  else
+    new RegExp('(^| )' + class_name + '( |$)', 'gi').test(el.className);
 
-  ready = ->
-    add_class(wrapper, 'ready')
+html = document.getElementById('js-html')
+wrapper = document.getElementById('js-wrapper')
+form = document.getElementById('js-form')
+letterbox = document.getElementById('js-letterbox')
 
-  close_form = ->
-    add_class(letterbox, 'closed')
+ready = ->
+  add_class(wrapper, 'ready')
 
-  submit_form = ->
-    form.submit()
+close_form = ->
+  add_class(letterbox, 'closed')
 
-  setTimeout ready, 500
+submit_form = ->
+  form.submit()
 
-  if form
-    add_event form, 'submit', (e) ->
-      e.preventDefault()
-      close_form()
-      setTimeout submit_form, 500
+setTimeout ready, 500
+
+if has_class(html, 'no-svg')
+  images = document.getElementsByTagName('img')
+  get_svgs = (img) ->
+    png_fallback = img.getAttribute('data-png')
+    img.setAttribute('src', png_fallback) if png_fallback
+  get_svgs img for img in images
+
+if form
+  add_event form, 'submit', (e) ->
+    e.preventDefault()
+    close_form()
+    setTimeout submit_form, 500
