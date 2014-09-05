@@ -19,6 +19,11 @@
           background-image: {{ space.background_image }};
         }
       {% endif %}
+      {% if space.text_color != empty %}
+        body {
+          color: {{ space.text_color }};
+        }
+      {% endif %}
     </style>
     {{ space.google_analytics }}
   </head>

@@ -26,6 +26,8 @@ The landing page theme has the following custom attribtues available:
 	- Help text: `Specfiy a hex colour for your background e.g. #757F9A`
 - `background_image`
 	- Help text: `Specify a background image, e.g. url(foo.jpg) or linear-gradient(90deg, #FFF 0%, #000 100%)` 
+- `text_color`
+	- Help text: `Specify a hex colour for your text e.g. #111`
 
 You can output these calling them from the `space` object.
 
