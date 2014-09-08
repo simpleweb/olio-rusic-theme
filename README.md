@@ -1,6 +1,67 @@
 # Rusic landing page theme
 
-A blank Rusic theme with a dab of Sass and Coffee.
+A landing theme for Rusic, allowing for simple email signup.
+
+## Prerequisites
+
+You will need the following installed before working with this project.
+
+#### Javascripts
+
+- `node` and `npm`
+- `bower`
+- `gulp`
+- `coffee-script`
+
+#### Rubies
+
+- `ruby`
+- `sass`
+- `rusic`
+
+## Setup
+
+Copy `.rusic.yml.example` to `.rusic.yml` and fill out the required details. See the [Rusic gem](https://github.com/rusic/rusic-gem#deploy-using-a-rusic-file) docs for further documentation if you're unsure on what goes where.
+
+Now you can install some dependencies!
+
+```
+$ npm install && bower install
+```
+
+This is all you should need to get up and running.
+
+## Development
+
+During development you will need `gulp` running to compile the Sass and Coffeescript. You can do this by simply running:
+
+```
+$ gulp
+```
+
+This will watch for any changes and process everything automatically including any assets installed with Bower.
+
+You will also need to watch with the `rusic` to the environment your developing in by running:
+
+```
+$ rusic deploy <environment> --watch
+```
+
+Once these are both running you should be able to see the compiled scripts, styles and liquid templates by visting your space. 
+
+## Deployment
+
+First, compile the latest assets.
+
+```
+$ gulp build
+```
+
+Then you can deploy using the [Rusic gem](https://github.com/rusic/rusic-gem).
+
+```
+$ rusic deploy <environment>
+```
 
 ## Custom attributes
 
