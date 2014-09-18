@@ -1,0 +1,22 @@
+google_analytics:
+  value:
+  help_text: Insert your full Google Analytics code
+logo:
+  value: "//rusic-landing-theme.s3.amazonaws.com/logo.svg"
+  help_text: Full link to your logo
+heading:
+  value: Our website is coming soon
+sub_heading:
+  value: "praesent ornare elit leo, non bibendum metus"
+signup_message:
+  value: "Keep up to date by signing up with Twitter <em>or</em> Facebook"
+  help_text: A message to prompt users to sign up
+thank_you_message:
+  value: Thank you for signing up!
+  help_text: A message to display after they sign up
+background_color:
+  help_text: "Specfiy a hex colour for your background e.g. #757F9A"
+background_image:
+  help_text: "Specify a background image, e.g. url(foo.jpg) or linear-gradient(90deg, #FFF 0%, #000 100%)"
+text_color:
+  help_text: "Specify a hex colour for your text e.g. #111"
