@@ -5,6 +5,6 @@ components
 *.css.map
 .rusic.yml
 
-assets/styles.css
+assets/style.css
 assets/main.js
 bin

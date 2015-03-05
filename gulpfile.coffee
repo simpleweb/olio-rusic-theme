@@ -39,7 +39,7 @@ gulp.task 'sass', ->
     .pipe sass('sourcemap=none': true).on('error', error)
     .pipe sass_filter.restore()
     .pipe minify_css()
-    .pipe concat('styles.css')
+    .pipe concat('style.css')
     .pipe prefix()
     .pipe gulp.dest(paths.assets)
 
