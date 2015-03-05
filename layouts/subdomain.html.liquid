@@ -12,32 +12,19 @@
     <link rel="stylesheet" href="{{ 'share.css' | stylesheet_url }}">
     <style>
       {% if space.background_color != empty %}
-        body {
-          background-color: {{ space.background_color }};
-        }
+        body { background-color: {{ space.background_color }}; }
       {% endif %}
       {% if space.background_image != empty %}
-        body {
-          background-image: {{ space.background_image }};
-        }
+        body { background-image: {{ space.background_image }}; }
       {% endif %}
       {% if space.text_color != empty %}
-        body {
-          color: {{ space.text_color }};
-        }
+        body { color: {{ space.text_color }};  }
       {% endif %}
       {% if space.wrapper_background != empty %}
-        .wrapper {
-          background: {{ space.wrapper_background }};
-        }
+        .wrapper { background: {{ space.wrapper_background }}; }
       {% endif %}
-      .btn {
-        color: {{ space.button_text_color }};
-      }
-
-      p a {
-        color: {{space.link_color }};
-      }
+      .button { color: {{ space.button_text_color }}; }
+      p a { color: {{ space.link_color }}; }
     </style>
     {{ space.google_analytics }}
   </head>
