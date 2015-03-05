@@ -7,6 +7,24 @@
   <input type="hidden" name="idea[title]" value="BLANK">
   <input type="hidden" name="idea[content]" value="BLANK">
 
+  {% if space.collect_name == 'true' %}
+  <div class="form-field">
+    <input
+      type="text"
+      class="input"
+      name="idea[custom][name]"
+      placeholder="Your name">
+  </div>
+  {% endif %}
+  {% if space.collect_postcode == 'true' %}
+  <div class="form-field">
+    <input
+      type="text"
+      class="input"
+      name="idea[custom][postcode]"
+      placeholder="Your postcode">
+  </div>
+  {% endif %}
   <div class="form-field">
     <input
       type="email"

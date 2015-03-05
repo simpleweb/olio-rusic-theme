@@ -57,3 +57,9 @@ facebook_url:
 linkedin_url:
   value: ""
   help_text: "URL to your LinkedIn profile"
+collect_name:
+  value: ""
+  help_text: "Set to 'true' if you'd like to collect names"
+collect_postcode:
+  value: ""
+  help_text: "Set to 'true' if you'd like to collect postcodes"
