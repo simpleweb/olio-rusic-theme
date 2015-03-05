@@ -1,34 +1,6 @@
 .form {
-  margin: 0 auto 30px;
-  max-width: 460px;
   width: 100%;
-
-  &__label {
-    margin-bottom: 10px;
-    display: block;
-  }
-
-  &__letterbox {
-    transform-origin: top center;
-    transition: transform ease-out .4s, opacity ease-out .6s;
-
-    &.closed {
-      transform: perspective(600px) rotateX(-20deg);
-      opacity: 0;
-    }
-  }
-}
-
-.form-control {
-  padding: 10px 15px;
-  border-radius: 3px;
-  width: 280px;
-  border: none;
-  margin-bottom: 20px;
-  color: $color-dark;
-
-  &.large {
-    max-width: 90%;
-    width: 500px;
-  }
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
