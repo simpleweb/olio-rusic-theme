@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="js-html">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,20 +46,16 @@
   <body>
 
     {% if space.guest_ideas %}
-
       <div class="wrapper" id="js-wrapper">
         <img src="{{ space.logo }}" alt="Logo">
-
         {{ yield }}
-
       </div>
     {% else %}
       <div class="wrapper" id="js-wrapper">
-        <h1>This the requires <a href="http://rusic.readme.io/v1/docs/guest-ideas">guest ideas</a> to be enabled.</h1>
+        <h1>This site requires <a href="http://rusic.readme.io/v1/docs/guest-ideas">guest ideas</a> to be enabled.</h1>
       </div>
     {% endif %}
 
-    <script src="{{ 'modernizr.js' | javascript_url }}"></script>
     <script src="{{ 'main.js' | javascript_url }}"></script>
   </body>
 </html>
