@@ -26,6 +26,11 @@
           color: {{ space.text_color }};
         }
       {% endif %}
+      {% if space.wrapper_background != empty %}
+        .wrapper {
+          background: {{ space.wrapper_background }};
+        }
+      {% endif %}
       .btn {
         color: {{ space.button_text_color }};
       }

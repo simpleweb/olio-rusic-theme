@@ -28,6 +28,9 @@ background_color:
 background_image:
   value: ""
   help_text: "Specify a background image, e.g. url(foo.jpg) or linear-gradient(90deg, #FFF 0%, #000 100%)"
+wrapper_background:
+  value: ""
+  help_text: "Specify a background image, e.g. rgba(0, 0, 0, .9)"
 text_color:
   value: ""
   help_text: "Specify a hex colour for your text e.g. #111"
