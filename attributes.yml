@@ -48,3 +48,12 @@ link_color:
 share_image:
   value: ""
   help_text: "Specify an image for using when sharing to social networks"
+twitter_url:
+  value: ""
+  help_text: "URL to your Twitter profile"
+facebook_url:
+  value: ""
+  help_text: "URL to your Facebook profile"
+linkedin_url:
+  value: ""
+  help_text: "URL to your LinkedIn profile"

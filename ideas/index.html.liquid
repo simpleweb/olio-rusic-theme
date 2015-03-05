@@ -8,12 +8,30 @@
   <input type="hidden" name="idea[content]" value="BLANK">
 
   <div class="form-field">
-    <input type="email" class="input" name="identity[email]" placeholder="Enter email" required>
+    <input
+      type="email"
+      class="input"
+      name="identity[email]"
+      placeholder="Enter your email"
+      required>
   </div>
 
   <button type="submit" class="button">Submit</button>
 </form>
 
-<img src="{{ 'twitter-icon-2x.png' | image_url }}" width="32" alt="">
-<img src="{{ 'facebook-icon-2x.png' | image_url }}" width="32" alt="">
-<img src="{{ 'linkedin-icon-2x.png' | image_url }}" width="32" alt="">
+<ul class="inline-list">
+  <li class="inline-list__item">
+    <a href="">
+      <img src="{{ 'twitter-icon-2x.png' | image_url }}" width="32" alt="Twitter icon">
+    </a>
+  </li><li class="inline-list__item">
+    <a href="">
+      <img src="{{ 'facebook-icon-2x.png' | image_url }}" width="32" alt="Facebook icon">
+    </a>
+  </li><li class="inline-list__item">
+    <a href="">
+      <img src="{{ 'linkedin-icon-2x.png' | image_url }}" width="32" alt="LinkedIn icon">
+    </a>
+  </li>
+</ul>
+
