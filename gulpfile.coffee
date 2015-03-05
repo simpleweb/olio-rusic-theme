@@ -61,7 +61,7 @@ gulp.task 'concat', ['coffee'], ->
     .pipe uglify()
     .pipe gulp.dest(paths.assets)
 
-gulp.task 'scripts', ['coffee', 'concat']
+gulp.task 'scripts', ['concat']
 
 gulp.task 'serve', ->
   gulp.src './'
