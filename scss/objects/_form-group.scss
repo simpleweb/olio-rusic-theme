@@ -1,0 +1,15 @@
+$bp: 600px;
+
+.form-group {
+  @include above($bp) {
+    width: 100%;
+    display: table;
+    margin-bottom: 10px;
+  }
+
+  &__cell {
+    @include above($bp) {
+      display: table-cell;
+    }
+  }
+}
