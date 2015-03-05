@@ -4,6 +4,9 @@ google_analytics:
 logo:
   value: "//rusic-landing-theme.s3.amazonaws.com/logo.svg"
   help_text: "Full link to your logo"
+favicon:
+  value: "//rusic.com/favicon.ico"
+  help_text: "URL to your favicon"
 heading:
   value: "Our website is coming soon"
   help_text: "The heading on the initial page"
