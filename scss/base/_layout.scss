@@ -5,24 +5,4 @@
   position: relative;
   text-align: center;
   padding: 30px 0 30px;
-
-  @include mq-min(480px) {
-    .csstransforms & {
-      top: 50%;
-      padding-top: 0;
-      transform: translateY(-50%) scale(1);
-    }
-
-    .csstransforms.csstransitions.opacity & {
-      opacity: 0;
-      transform: translateY(-50%) scale(1.04);
-      transition: opacity ease-out .8s, transform ease-out .8s;
-
-      &.ready {
-        opacity: 1;
-        transform: translateY(-50%) scale(1);
-      }
-    }
-  }
-
 }
