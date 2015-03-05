@@ -7,7 +7,11 @@
 
   <p>{{ space.share_message }}</p>
 
-  <input type="text" readonly class="form-control large" value="http://{{ host }}{{ idea.referral_link }}">
+  <div class="share-link">
+    <div class="form-field">
+      <input type="text" readonly class="input" value="http://{{ host }}{{ idea.referral_link }}">
+    </div>
+  </div>
 
   <div>
     <i>or share to</i>
