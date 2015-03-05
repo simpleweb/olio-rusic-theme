@@ -46,3 +46,11 @@ if form
     e.preventDefault()
     close_form()
     setTimeout submit_form, 500
+
+init = ->
+  new ShareBar({'facebookAppId': '107114766046971'})
+
+unless document.readyState is "loading"
+  init()
+else
+  document.addEventListener "DOMContentLoaded", init

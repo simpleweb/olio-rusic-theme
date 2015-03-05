@@ -1,1 +1,26 @@
+<h1>{{ space.post_heading }}</h1>
+<h2>{{ space.post_sub_heading }}</h2>
+
 <h3>{{ space.thank_you_message }}</h3>
+
+{% if space.referrals_enabled == "true" %}
+
+  <p>{{ space.share_message }}</p>
+
+  <input type="text" readonly class="form-control large" value="http://{{ host }}{{ idea.referral_link }}">
+
+  <div>
+    <i>or share to</i>
+  </div>
+  <br>
+
+  <div id="fb-root"></div>
+  <div class="share-bar" data-url="{{ space.permalink }}" data-image-url="{{ space.share_image }}"></div>
+
+  <script>
+    el =  document.getElementsByClassName("share-bar")[0];
+    url = "http://"+location.host+"{{ idea.referral_link }}";
+    el.setAttribute("data-title", "{{space.social_messaging}}");
+    el.setAttribute("data-url", url);
+  </script>
+{% endif %}

@@ -18,3 +18,26 @@
     }
   }
 }
+
+.form-control {
+  padding: 10px 15px;
+  border-radius: 3px;
+  width: 280px;
+  border: none;
+  margin-bottom: 20px;
+  color: $color-dark;
+
+  &.large {
+    max-width: 90%;
+    width: 500px;
+  }
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 20px;
+  background: $color-light;
+  color: $color-dark;
+}
