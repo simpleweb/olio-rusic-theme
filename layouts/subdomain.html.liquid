@@ -1,65 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" id="js-html">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ space.title }}</title>
     <meta name="description" content="{{ space.summary }}">
-    <link rel="shortcut icon" href="{{ 'favicon.ico' | image_url }}">
+    <link rel="shortcut icon" href="{{ space.favicon }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,600italic,700">
     <link rel="stylesheet" href="{{ 'style.css' | stylesheet_url }}">
     <link rel="stylesheet" href="{{ 'share.css' | stylesheet_url }}">
     <style>
       {% if space.background_color != empty %}
-        body {
-          background-color: {{ space.background_color }};
-        }
+        body { background-color: {{ space.background_color }}; }
       {% endif %}
       {% if space.background_image != empty %}
-        body {
-          background-image: {{ space.background_image }};
-        }
+        body { background-image: {{ space.background_image }}; }
       {% endif %}
       {% if space.text_color != empty %}
-        body {
-          color: {{ space.text_color }};
-        }
-
-        .btn {
-          padding: 10px 15px;
-          border-radius: 3px;
-          border: none;
-          margin-bottom: 20px;
-          background: {{ space.text_color }};
-        }
+        body { color: {{ space.text_color }};  }
       {% endif %}
-      .btn {
-        color: {{ space.button_text_color }};
-      }
-
-      p a {
-        color: {{space.link_color }};
-      }
+      {% if space.wrapper_background != empty %}
+        .wrapper { background: {{ space.wrapper_background }}; }
+      {% endif %}
+      .button { color: {{ space.button_text_color }}; }
+      p a { color: {{ space.link_color }}; }
     </style>
     {{ space.google_analytics }}
   </head>
   <body>
 
     {% if space.guest_ideas %}
-
-      <div class="wrapper" id="js-wrapper">
+      <div class="wrapper">
         <img src="{{ space.logo }}" alt="Logo">
-
         {{ yield }}
-
       </div>
     {% else %}
-      <div class="wrapper" id="js-wrapper">
-        <h1>This the requires <a href="http://rusic.readme.io/v1/docs/guest-ideas">guest ideas</a> to be enabled.</h1>
+      <div class="wrapper">
+        <h1>This site requires <a href="http://rusic.readme.io/v1/docs/guest-ideas">guest ideas</a> to be enabled.</h1>
       </div>
     {% endif %}
 
-    <script src="{{ 'modernizr.js' | javascript_url }}"></script>
     <script src="{{ 'main.js' | javascript_url }}"></script>
   </body>
 </html>

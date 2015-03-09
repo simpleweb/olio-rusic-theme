@@ -1,33 +1,39 @@
 google_analytics:
   value: ""
-  help_text: Insert your full Google Analytics code
+  help_text: "Insert your full Google Analytics code"
 logo:
   value: "//rusic-landing-theme.s3.amazonaws.com/logo.svg"
-  help_text: Full link to your logo
+  help_text: "Full link to your logo"
+favicon:
+  value: "//rusic.com/favicon.ico"
+  help_text: "URL to your favicon"
 heading:
-  value: Our website is coming soon
-  help_text: The heading on the initial page
+  value: "Our website is coming soon"
+  help_text: "The heading on the initial page"
 post_heading:
-  value: Our website is coming soon
-  help_text: The heading after signing up
+  value: "Our website is coming soon"
+  help_text: "The heading after signing up"
 sub_heading:
   value: "praesent ornare elit leo, non bibendum metus"
-  help_text: The subheading on the initial page
+  help_text: "The subheading on the initial page"
 post_sub_heading:
   value: "praesent ornare elit leo, non bibendum metus"
-  help_text: The subheading after signing up
+  help_text: "The subheading after signing up"
 signup_message:
   value: "Keep up to date by signing up with your email"
-  help_text: A message to prompt users to sign up
+  help_text: "A message to prompt users to sign up"
 thank_you_message:
-  value: Thank you for signing up!
-  help_text: A message to display after they sign up
+  value: "Thank you for signing up!"
+  help_text: "A message to display after they sign up"
 background_color:
   value: ""
   help_text: "Specfiy a hex colour for your background e.g. #757F9A"
 background_image:
   value: ""
   help_text: "Specify a background image, e.g. url(foo.jpg) or linear-gradient(90deg, #FFF 0%, #000 100%)"
+wrapper_background:
+  value: ""
+  help_text: "Specify a background image, e.g. rgba(0, 0, 0, .9)"
 text_color:
   value: ""
   help_text: "Specify a hex colour for your text e.g. #111"
@@ -48,3 +54,18 @@ link_color:
 share_image:
   value: ""
   help_text: "Specify an image for using when sharing to social networks"
+twitter_url:
+  value: ""
+  help_text: "URL to your Twitter profile"
+facebook_url:
+  value: ""
+  help_text: "URL to your Facebook profile"
+linkedin_url:
+  value: ""
+  help_text: "URL to your LinkedIn profile"
+collect_name:
+  value: ""
+  help_text: "Set to 'true' if you'd like to collect names"
+collect_postcode:
+  value: ""
+  help_text: "Set to 'true' if you'd like to collect postcodes"

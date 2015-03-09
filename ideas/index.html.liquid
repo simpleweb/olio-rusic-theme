@@ -3,13 +3,55 @@
 
 <h3>{{ space.signup_message }}</h3>
 
-<form action="{{ space.permalink }}/ideas" method="post" enctype="multipart/form-data">
+<form action="{{ space.permalink }}/ideas" method="post" class="form">
   <input type="hidden" name="idea[title]" value="BLANK">
   <input type="hidden" name="idea[content]" value="BLANK">
 
   <div class="form-group">
-    <input type="email" class="form-control" name="identity[email]" placeholder="Enter email" required>
+    {% if space.collect_name == 'true' %}
+    <div class="form-field form-group__cell">
+      <input
+        type="text"
+        class="input"
+        name="idea[custom][name]"
+        placeholder="Your name">
+    </div>
+    {% endif %}
+    {% if space.collect_postcode == 'true' %}
+    <div class="form-field form-group__cell">
+      <input
+        type="text"
+        class="input"
+        name="idea[custom][postcode]"
+        placeholder="Your postcode">
+    </div>
+    {% endif %}
+  </div>
+  <div class="form-field">
+    <input
+      type="email"
+      class="input"
+      name="identity[email]"
+      placeholder="Enter your email"
+      required>
   </div>
 
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="button">Submit</button>
 </form>
+
+<ul class="inline-list">
+  {% if space.twitter_url != empty %}<li class="inline-list__item">
+    <a href="{{ space.twitter_url }}" target="_blank">
+      <img src="{{ 'twitter-icon-2x.png' | image_url }}" width="32" alt="Twitter icon">
+    </a>
+  </li>{% endif %}{% if space.facebook_url != empty %}<li class="inline-list__item">
+    <a href="{{ space.facebook_url }}" target="_blank">
+      <img src="{{ 'facebook-icon-2x.png' | image_url }}" width="32" alt="Facebook icon">
+    </a>
+  </li>{% endif %}{% if space.linkedin_url != empty %}<li class="inline-list__item">
+    <a href="{{ space.linkedin_url }}" target="_blank">
+      <img src="{{ 'linkedin-icon-2x.png' | image_url }}" width="32" alt="LinkedIn icon">
+    </a>
+  </li>{% endif %}
+</ul>
+
