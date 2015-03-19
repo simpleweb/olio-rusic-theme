@@ -1,21 +1,8 @@
 /**
- * Fonts
- */
-@import "fonts/fonts";
-
-/**
- * Vendor
- */
-@import "vendor/normalize";
-
-/**
  * The theme variables for font sizes, colouring and others can be found here
  */
 @import "variables";
 
-/**
- * Handy mixins
- */
 @import "mixins";
 
 /**
@@ -31,8 +18,11 @@
  */
 @import "objects/button";
 @import "objects/form";
+@import "objects/form-field";
+@import "objects/form-group";
 @import "objects/inline-list";
 @import "objects/input";
+@import "objects/share-link";
 
 /**
  * UI
@@ -41,13 +31,3 @@
 @import "ui/form";
 @import "ui/inline-list";
 @import "ui/input";
-
-/**
- * Animation
- */
-// @import "animation/...";
-
-/**
- * Helpers
- */
-// @import "helpers/...";

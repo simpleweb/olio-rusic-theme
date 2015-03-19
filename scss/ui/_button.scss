@@ -1,7 +1,11 @@
 .button {
   -webkit-appearance: none;
-  background: $color-light;
-  color: $color-dark;
+  background-color: $color-dark;
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+  border: none;
+  color: inherit;
+  text-decoration: none;
   border-radius: 3px;
-  border: 1px solid darken($color-light, 2%);
 }

@@ -8,6 +8,8 @@ bower = require 'main-bower-files'
 concat = require 'gulp-concat'
 svg2png = require 'gulp-svg2png'
 prefix = require 'gulp-autoprefixer'
+gulp_filter = require 'gulp-filter'
+debug = require 'gulp-debug'
 
 paths =
   sass: 'scss/style.scss'
@@ -24,10 +26,20 @@ gulp.task 'svg2png', ->
     .pipe gulp.dest paths.assets
 
 gulp.task 'sass', ->
+  styles_filter = gulp_filter ['**/*.scss', '**/*.css']
+  sass_filter = gulp_filter ['**/*.scss']
+
+  files = bower()
+  files.push paths.sass
+
   gulp
-    .src paths.sass
+    .src files
+    .pipe styles_filter
+    .pipe sass_filter
     .pipe sass('sourcemap=none': true).on('error', error)
+    .pipe sass_filter.restore()
     .pipe minify_css()
+    .pipe concat('style.css')
     .pipe prefix()
     .pipe gulp.dest(paths.assets)
 
@@ -39,15 +51,17 @@ gulp.task 'coffee', ->
     .pipe gulp.dest(paths.assets)
 
 gulp.task 'concat', ['coffee'], ->
+  filter = gulp_filter ['**/*.js']
   files = bower()
   files.push "#{paths.assets}/main.js"
   gulp
     .src files
+    .pipe filter
     .pipe concat('main.js')
     .pipe uglify()
     .pipe gulp.dest(paths.assets)
 
-gulp.task 'scripts', ['coffee', 'concat']
+gulp.task 'scripts', ['concat']
 
 gulp.task 'serve', ->
   gulp.src './'
