@@ -15,11 +15,21 @@
           background-color: {{ space.background_color }};
         }
       {% endif %}
+
       {% if space.background_image != empty %}
         body {
           background-image: {{ space.background_image }};
         }
       {% endif %}
+
+      {% if space.background_color == "" %}
+        {% if space.background_image == "" %}
+          body {
+            background-image: linear-gradient(90deg,#757F9A 0,#D7DDE8 100%);
+          }
+        {% endif %}
+      {% endif %}
+
       {% if space.text_color != empty %}
         body {
           color: {{ space.text_color }};
