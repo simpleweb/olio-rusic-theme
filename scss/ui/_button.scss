@@ -1,0 +1,7 @@
+.button {
+  -webkit-appearance: none;
+  background: $color-light;
+  color: $color-dark;
+  border-radius: 3px;
+  border: 1px solid darken($color-light, 2%);
+}
