@@ -27,6 +27,15 @@
     </div>
     {% endif %}
   </div>
+  {% if space.collect_phonenumber == 'true' %}
+  <div class="form-field">
+    <input
+      type="tel"
+      class="input"
+      name="idea[custom][phonenumber]"
+      placeholder="Enter your phone number">
+  </div>
+  {% endif %}
   <div class="form-field">
     <input
       type="email"
