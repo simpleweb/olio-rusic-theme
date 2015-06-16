@@ -69,3 +69,6 @@ collect_name:
 collect_postcode:
   value: ""
   help_text: "Set to 'true' if you'd like to collect postcodes"
+collect_phonenumber:
+  value: ""
+  help_text: "Set to 'true' if you'd like to collect phone numbers"
